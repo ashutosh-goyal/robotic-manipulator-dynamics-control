@@ -76,7 +76,7 @@ Our initial approach was to apply an impulsive boundary condition: the moment th
 * **Result:** The simulation gets "stuck" and freezes at the boundary.
 * **Why it fails (Numerical Chattering):** MATLAB's adaptive step-size solvers (like `ode45` or `ode23`) rely on continuous derivatives. An instantaneous flip in velocity creates a severe mathematical discontinuity. When the link hits the boundary, the solver flips the velocity. However, due to continuous forces (like gravity or Coriolis) pushing it back, and finite numerical precision, the solver steps slightly past the boundary again in the next micro-step. This causes the velocity to flip back and forth infinitely in infinitesimally small time steps—a phenomenon known as **Zeno's paradox or numerical chattering**—forcing the solver to reduce its step size to zero and freeze.
 
-![Velocity Flip Stuck](./media/RPRP_velocity_stuck.gif) *(Place your failed velocity flip video here)*
+https://github.com/user-attachments/assets/49b84335-b542-4215-be65-00c9dd259c59
 
 **Attempt 2: High-Stiffness Potential Springs (Success)**
 To solve the discontinuity issue, we introduced virtual high-stiffness spring potential energy terms (e.g., $PE_{spring} = \frac{1}{2}k(l_{max}-r)^2$) only when the link exceeds its bounds. 
