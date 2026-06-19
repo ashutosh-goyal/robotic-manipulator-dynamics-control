@@ -82,7 +82,7 @@ https://github.com/user-attachments/assets/49b84335-b542-4215-be65-00c9dd259c59
 To solve the discontinuity issue, we introduced virtual high-stiffness spring potential energy terms (e.g., $PE_{spring} = \frac{1}{2}k(l_{max}-r)^2$) only when the link exceeds its bounds. 
 * **Result:** The simulation works perfectly. The stiff spring provides a highly repulsive but **continuous** force that the ODE solver can smoothly integrate, gracefully decelerating and reversing the link without mathematical singularities.
 
-![Spring Constraint Success](./media/RPRP_spring_success.gif) *(Place your successful spring video here)*
+https://github.com/user-attachments/assets/f2e18f44-d198-40be-ac6f-e1365d7fd7dd
 
 ### 3. Validation via Energy Conservation
 To prove the physical and mathematical validity of our Lagrangian models, we track the system's energies over time without external torques. As expected in a conservative system, the Kinetic Energy (KE) and Potential Energy (PE) heavily fluctuate, but the **Total Energy (TE = KE + PE) remains perfectly constant**.
