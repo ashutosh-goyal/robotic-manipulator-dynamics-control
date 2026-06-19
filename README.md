@@ -65,7 +65,7 @@ This project was developed by Ashutosh Goyal, Rajesh Kumar, and Ravi Dhorajia, u
 
 ### 1. Complex Trajectory Tracking (3R Manipulator)
 The inverse kinematics and trajectory planning of the 3R redundant manipulator tracking a continuous Lissajous (figure-8 / infinity) curve. The redundancy is resolved using the Moore-Penrose pseudo-inverse Jacobian.
-![3R Infinity Trajectory](./media/3R_infinity.gif) *(Place your video/gif here)*
+![3R Infinity Trajectory](./media/3R.mp4) *(Place your video/gif here)*
 
 ### 2. Prismatic Joint Constraints: The Challenge
 A major technical challenge in simulating the RPRP robot is **Prismatic Joint Constraining**. Without constraints, prismatic links travel infinitely. We tested two methods to solve this:
