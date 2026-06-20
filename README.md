@@ -77,6 +77,11 @@ To keep the repository clean, all MATLAB scripts are located in the `src/` direc
  ┃ ┣ 📜 RPRP_dynamics_without_constraint.m
  ┃ ┣ 📜 RPRP_dynamics_only_KE.m
  ┃ ┣ 📜 ode_solver_without_constraint.m  # Core state-space ODE solver
+ ┃ ┣ 📜 ode_solver_full_spring.m  
+ ┃ ┣ 📜 ode_solver_flip_velocity.m
+ ┃ ┣ 📜 simulation_RPRP_spring.m       # simulation video
+ ┃ ┣ 📜 simulation_flip_velocity.m
+ ┃ ┣ 📜 simulation_RPRP_without_constraint.m
  ┃ ┣ 📜 RP_robot_simulation_only_kinematics.m
  ┃ ┣ 📜 RP_Dynamics_without_constraint.m
  ┃ ┣ 📜 RP_Dynamics_with_constraint.m
@@ -102,7 +107,12 @@ To keep the repository clean, all MATLAB scripts are located in the `src/` direc
 * **`RPRP_dynamics_flip_velocity.m`**: Implements the impulsive boundary constraint, instantly flipping the velocity vector upon reaching maximum extension.
 * **`RPRP_dynamics_with_spring.m`**: Enforces physical boundaries using elastic limit buffers (spring potential field penalties).
 * **`RPRP_dynamics_only_KE.m`**: Neutralizes gravity and potential energy to strictly analyze the inertial coupling and Kinetic Energy conservation.
+* **`simulation_flip_velocity.m`**: Simulation to show the stucking behaviour.
+* **`simulation_RPRP_without_constraint.m`**: Simulation to show the why we need to put the constraint on the Prismatic joint.
+* **`simulation_RPRP_spring.m`**: Simulation to verify the spring based methodology.
 * **`ode_solver_without_constraint.m`**: The core state-space differential equations solver used by the RPRP dynamic driver scripts.
+* **`ode_solver_flip_velocity.m`**: The core state-space differential equations solver used by the RPRP dynamic driver scripts.
+* **`ode_solver_full_spring.m`**: The core state-space differential equations solver used by the RPRP dynamic driver scripts.
 
 ### ⚙️ RP (2-DoF) Scripts
 * **`RP_robot_simulation_only_kinematics.m`**: Forward kinematics and task-space trajectory visualization for an RP arm.
