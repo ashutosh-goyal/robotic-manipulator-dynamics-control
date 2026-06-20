@@ -48,6 +48,7 @@ https://github.com/user-attachments/assets/f2e18f44-d198-40be-ac6f-e1365d7fd7dd
 ### 3. Validation via Energy Conservation
 To prove the physical and mathematical validity of our Lagrangian models, the system's energies over time without external torques are tracked. As expected in a conservative system, the Kinetic Energy (KE) and Potential Energy (PE) fluctuate, but the **Total Energy (TE = KE + PE) remains constant**.
 
+
 <table>
   <tr>
     <td align="center">
