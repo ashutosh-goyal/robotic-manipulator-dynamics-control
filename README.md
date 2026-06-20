@@ -32,8 +32,8 @@ https://github.com/user-attachments/assets/7b9ed153-bfb9-474f-a4c8-0bced8359185
 ### 2. Prismatic Joint Constraints: The Challenge
 A major technical challenge in simulating the RPRP robot is **Prismatic Joint Constraining**. Without constraints, prismatic links travel infinitely. Two methods are tested to resolve this issue:
 
-**Method 1: Velocity Reflection / Flipping **
-Initial approach was to apply an impulsive boundary condition: the moment the link hits its maximum limit, robot instantaneously invert its velocity ($\dot{r} \to -\dot{r}$).
+**Method 1: Velocity Reflection / Flipping**
+Initial approach was to apply an impulsive boundary condition: the moment the link hits its maximum limit, the robot instantaneously inverts its velocity ($\dot{r} \to -\dot{r}$).
 * **Result:** The simulation gets "stuck" and freezes at the boundary.
 * **Why it fails (Numerical Chattering):** MATLAB's adaptive step-size solvers (like `ode45` or `ode23`) rely on continuous derivatives. An instantaneous flip in velocity creates a severe mathematical discontinuity. When the link hits the boundary, the solver flips the velocity. However, due to continuous forces (like gravity or Coriolis) pushing it back, and finite numerical precision, the solver steps slightly past the boundary again in the next micro-step. This causes the velocity to flip back and forth infinitely in infinitesimally small time steps—a phenomenon known as **Zeno's paradox or numerical chattering**—forcing the solver to reduce its step size to zero and freeze.
 
@@ -46,7 +46,7 @@ To solve the discontinuity issue, we introduced virtual high-stiffness spring po
 https://github.com/user-attachments/assets/f2e18f44-d198-40be-ac6f-e1365d7fd7dd
 
 ### 3. Validation via Energy Conservation
-To prove the physical and mathematical validity of our Lagrangian models, the system's energies over time without external torques are tracked. As expected in a conservative system, the Kinetic Energy (KE) and Potential Energy (PE) fluctuate widely, but the **Total Energy (TE = KE + PE) remains constant**.
+To prove the physical and mathematical validity of our Lagrangian models, the system's energies over time without external torques are tracked. As expected in a conservative system, the Kinetic Energy (KE) and Potential Energy (PE) fluctuate, but the **Total Energy (TE = KE + PE) remains constant**.
 ![Energy Conservation Graph](./media/Total_energy.svg) 
 ![Energy Conservation Graph](./media/PE_and_KE.svg)
 
