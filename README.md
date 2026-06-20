@@ -72,10 +72,11 @@ To keep the repository clean, all MATLAB scripts are located in the `src/` direc
  ┃ ┣ 📜 RRRR_dynamics.m
  ┃ ┗ 📜 Infinity_3R.m                    # 3R trajectory tracking
  ┣ 📂 media (Visual Assets)
- ┃ ┣ 🖼️ energy_graph.png
- ┃ ┣ 🎥 3R_infinity.mp4
- ┃ ┣ 🎥 RPRP_velocity_stuck.mp4
- ┃ ┗ 🎥 RPRP_spring_success.mp4
+ ┃ ┣ 🖼️ Total_energy.svg
+ ┃ ┣ 🖼️ PE_and_KE.svg
+ ┃ ┣ 🎥 3R.mp4
+ ┃ ┣ 🎥 RPRP.mp4
+ ┃ ┗ 🎥 RPRP_flip.mp4
  ┣ 📄 RPRP_and_4R_Report.pdf             # Official mathematical report
  ┗ 📄 README.md
 ...
